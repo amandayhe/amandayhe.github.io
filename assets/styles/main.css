@@ -11,3 +11,78 @@
 :root {
   --bg: #fff;
 }
+
+/* Layout */
+.layout-container {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) minmax(300px, 2fr) minmax(300px, 2fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.left-column {
+  position: sticky;
+  top: 2rem;
+  padding-left: 2rem;
+  align-self: start;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.33% - 2rem);
+  margin-right: 2rem;
+}
+
+.left-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-column li {
+  margin-bottom: 1rem;
+}
+
+.left-column a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.middle-column,
+.right-column {
+  min-height: 100vh;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.33% - 2rem);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .left-column {
+    position: relative;
+    top: 0;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .left-column ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .left-column li {
+    margin-bottom: 0;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .left-column {
+    position: relative;
+  }
+}
