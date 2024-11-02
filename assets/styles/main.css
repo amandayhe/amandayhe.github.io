@@ -11,3 +11,19 @@
 :root {
   --bg: #fff;
 }
+
+.container {
+  display: flex;
+}
+
+.section {
+  float: left;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
