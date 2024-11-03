@@ -27,3 +27,9 @@
 .right {
   width: 75%;
 }
+
+.image-box {
+  min-height: 250px;
+  min-width: 100px;
+  max-width: 500px;
+}
