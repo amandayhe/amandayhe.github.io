@@ -1,60 +1,79 @@
-/* Fonts */
-
-/* @font-face {
-  font-family: "PT Mono";
-  src: url("../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/PTMono-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-.pt-mono-regular {
-  font-family: "PT Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-} */
 
 p {
-  font-family: "PT Mono", monospace;
+  font-family: "Kode Mono", monospace;
   font-weight: 400;
   font-style: normal;
+  /* letter-spacing: 0.02em; */
+  font-size: 0.9rem;
 }
 
 h1 {
-  font-family: "PT Mono", monospace;
-  font-weight: 800;
+  font-family: "Kode Mono", monospace;
+  font-weight: 600;
   font-style: normal;
 }
 
-h2 {
-  font-family: "PT Mono", monospace;
-  font-weight: 800;
+h4 {
+  font-family: "Kode Mono", monospace;
+  font-weight: 400;
   font-style: normal;
+  color: #555555;
+  font-size: 0.90rem;
+}
+
+
+
+h2 {
+  font-family: "Kode Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3 {
+  font-family: "Manrope", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
 }
 
 li {
-  font-family: "PT Mono", monospace;
+  font-family: "Kode Mono", monospace;
   font-weight: 400;
+  letter-spacing: 0.02em;
   font-style: normal;
+}
+
+.ascii {
+  color: #FE5BAA;
+  font-weight: 600;
+  opacity: 80%;
+
 }
 
 :root {
   --bg: #fff;
 }
 
+body {
+  background-color: #FAF9F6;
+}
+
 /* Layout */
 .layout-container {
   display: grid;
-  grid-template-columns: minmax(250px, 0.5fr) minmax(1200px, 1fr);
+  grid-template-columns: minmax(300px, 0.5fr) minmax(1100px, 1fr);
   gap: 2.5rem;
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 1rem 0;
+  height: 100vh;
 }
+
 .left-nav {
   position: sticky;
   padding-left: 1rem;
   top: 2rem;
+  height: fit-content;
   align-self: start;
   display: inline-block;
   vertical-align: top;
@@ -89,10 +108,11 @@ li {
   /* min-height: 100vh; */
   padding-top: 0;
   display: grid;
-  grid-template-rows: minmax(400, 1fr);
-  gap: 2.5rem;
-  max-height: 800px;
+  /* grid-template-rows: minmax(400px, auto); */
+  gap: 2rem;
   margin: 0 auto;
+  overflow-y: auto;
+  /* max-height: calc(100vh - 4rem); */
   /* padding: 0 1rem; */
   /* vertical-align: top;
   /* width: 75%; */
@@ -105,12 +125,11 @@ li {
   gap: 2.5rem;
   max-height: 800px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0rem 1rem 1.5rem 1rem;
 }
 
 .project-description {
   display: inline-block;
-
 }
 
 .project-media {
@@ -126,13 +145,12 @@ li {
   /* object-fit: cover; */
 }
 
-
-
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .layout-container {
     grid-template-columns: 1fr;
     gap: 1rem;
+    height: auto;
   }
 
   .left-nav {
@@ -150,7 +168,8 @@ li {
 
   .left-nav li {
     margin-bottom: 0;
-    
+  }
+  
   /* .project-media {
       width: 400px;
       height: 300px;
@@ -163,4 +182,3 @@ li {
     position: relative;
   }
 } */
-}
