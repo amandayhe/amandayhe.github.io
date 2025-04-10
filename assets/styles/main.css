@@ -147,6 +147,16 @@ body {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
+  .project-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    border-bottom: 1px solid #dfdfdf;
+  }
+
+  .project-media {
+    width: 100%;
+    padding: 0;
+  }
   .layout-container {
     grid-template-columns: 1fr;
     gap: 1rem;
